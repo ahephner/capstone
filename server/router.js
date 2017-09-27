@@ -1,9 +1,12 @@
-module.exports = function(app){
+var Auth = require('./controllers/auth');
+var User = require('./models/user');
 
+
+module.exports = function(app){
 	app.get('/', function(req, res, next){
-		res.send("Hello Page");
+		res.send("HELLO HOMEPAGE");		
 	});
-	app.get('/signup', function(req, res, next){
-		res.send("Hey good job");
-	});
+
+	app.post('/signup', Auth.signup);
+
 }
