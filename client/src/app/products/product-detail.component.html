@@ -12,18 +12,12 @@
                     <div class='col-md-3'>Name:</div>
                     <div class='col-md-6'>{{product.productName}}</div>
                 </div>
-                <div class='row'>
-                    <div class='col-md-3'>Code:</div>
-                    <div class='col-md-6'>{{product.productCode | lowercase | convertToSpaces: '-'}}</div>
-                </div>
+
                 <div class='row'>
                     <div class='col-md-3'>Description:</div>
                     <div class='col-md-6'>{{product.description}}</div>
                 </div>
-                <div class='row'>
-                    <div class='col-md-3'>Availability:</div>
-                    <div class='col-md-6'>{{product.releaseDate}}</div>
-                </div>
+
                 <div class='row'>
                     <div class='col-md-3'>Price:</div>
                     <div class='col-md-6'>{{product.price|currency:'USD':true}}</div>
