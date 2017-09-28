@@ -28,10 +28,11 @@ import { SigninComponent } from './auth/signin/signin.component';
         { path: 'welcome', component: WelcomeComponent },
      //default route on app loading
         { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+        {path: 'signup', component: SignupComponent},
         //wild card route incase url does not match any route
         //canActivate: [ProductGuardService], --would activate guard route
-        { path: '**', redirectTo: 'welcome', pathMatch: 'full'},
-        {path: 'signup', component: SignupComponent}
+        { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
+        
     ]),
     //import feature module
     ProductModule
