@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,6 +10,7 @@ import { WelcomeComponent } from './home/welcome.component';
 import { ProductModule } from './products/product.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { SignupService } from './services/signup.service';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { SigninComponent } from './auth/signin/signin.component';
     BrowserModule,
     //register Http client module
     HttpClientModule,
+    HttpModule,
     //path routes from root
     RouterModule.forRoot([
         { path: 'welcome', component: WelcomeComponent },
      //default route on app loading
         { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+        { path:'signin', component: SigninComponent},
         {path: 'signup', component: SignupComponent},
         //wild card route incase url does not match any route
         //canActivate: [ProductGuardService], --would activate guard route
@@ -37,6 +41,9 @@ import { SigninComponent } from './auth/signin/signin.component';
     //import feature module
     ProductModule
   ],
+    providers: [
+        SignupService
+    ],
   //adds bootstrap to app
   bootstrap: [AppComponent]
 })

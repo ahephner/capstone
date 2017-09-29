@@ -203,7 +203,7 @@
 
 //lifecycle hooks: 
 
-//OnInit: perform comonent initialization, retrieve data work with back end
+//OnInit: perform component initialization, retrieve data work with back end
 //OnChanges: perform action after change to input properties
 //OnDestroy: Perform clean up
 
