@@ -2,6 +2,9 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+// this allows us to do the [(ngModel)] in our forms
+import { FormsModule } from '@angular/forms';
+
 //this allows for routing
 import { RouterModule } from '@angular/router';
 
@@ -25,6 +28,7 @@ import { SignupService } from './services/signup.service';
     BrowserModule,
     //register Http client module
     HttpClientModule,
+    FormsModule,
     HttpModule,
     //path routes from root
     RouterModule.forRoot([

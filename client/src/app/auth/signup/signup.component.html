@@ -1,30 +1,26 @@
-<body>
- <form>
-   <div class = "container">
+<!-- the (submit) handles the action that the form produces after the submit button is pressed, with a specified function -->
+<form (submit)="onSignup()">
+  <div class="container">
     <div class="row">
-        <div class="col-md-3">    
-      <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control"ngModel>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" class="form-control" ngModel>
-      </div>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="name" id="name" name="name" class="form-control" ngModel>
-      </div>
-      <button class="btn btn-primary" type="submit"><a href="/products">Sign Up</a></button>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <!-- the [(ngModel)] tag binds the info from this field to the controllers properties -->
+          <input type="text" id="email" name="email" class="form-control" [(ngModel)] = "email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" [(ngModel)] = "password">
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" id="name" name="name" class="form-control" [(ngModel)] = "name">
+        </div>
+        <button class="btn btn-primary" type="submit">Sign Up</button>
       </div>
       <div class="col-md-7">
-          <img src="./assets/images/ramen.jpg" 
-          class="img-responsive center-block"
-          style="max-height:600px;padding-bottom:50px"/>
+        <img src="./assets/images/ramen.jpg" class="img-responsive center-block" style="max-height:600px;padding-bottom:50px" />
+      </div>
+    </div>
   </div>
-    
-  </div>
-</div>  
-
-  </form>
-  </body>
+</form>
