@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Http, Response} from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class SignupService {
-    constructor(private http: Http){ }
+    API_BASE: String = 'http://localhost:3000/';
+    constructor(private http: Http) { }
 
-    getTest(){
-        return this.http.get('localhost:3000/testservice').map((response: Response) =>{
-            return response.json().payload;
-        });
+    // this is the method that calls out to the server and post a new user.
+    signUp(userCreds) {
+        console.log(userCreds);
+        return this.http.post(this.API_BASE + 'signup', userCreds).toPromise().then(data => data);
     }
 }
