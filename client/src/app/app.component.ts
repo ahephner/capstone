@@ -4,13 +4,13 @@ import { Component } from '@angular/core';
   selector: 'pm-root',
   template: `
     <div>
-        <nav class='navbar navbar-default'>
+        <nav class='navbar navbar-default' style="background-color: #FF7575">
             <div class='container-fluid'>
-                <a class='navbar-brand'>{{pageTitle}}</a>
+                <a class='navbar-brand'style="color: white">{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
-                    <li><a [routerLink]="['/welcome']">Home</a></li>
-                    <li><a [routerLink]="['/signup']">Sign Up</a></li>
-                    <li><a [routerLink]="['/products']">Menu</a></li>
+                    <li><a [routerLink]="['/welcome']" style="color: white">Home</a></li>
+                    <li><a [routerLink]="['/signup']"style="color: white">Sign Up</a></li>
+                    <li><a [routerLink]="['/products']"style="color: white">Menu</a></li>
                 </ul>
             </div>
         </nav>

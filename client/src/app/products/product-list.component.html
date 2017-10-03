@@ -1,6 +1,6 @@
 <div class="container">
     <div class="col-lg-5">
-<div class='panel panel-primary'>
+<div class='panel panel-danger'>
     <div class='panel-heading'>
         {{pageTitle}}
     </div>
@@ -62,12 +62,11 @@
     Error: {{ errorMessage }}
 </div>
 </div>
-<div class='button'>
+
+<div class='button'style="padding-bottom: 5px">
         <button class="btn btn-primary" (click)='toggleTable()'>
-                {{takeOut ? 'Hide' : 'Take'}} Out?
+                {{takeOut ? 'Take' : 'Take'}} Out?
         </button>
-    </div>
-    <div class='button2'>
             <button class="btn btn-danger">
                 (555)555-5555
             </button>
@@ -76,9 +75,12 @@
             <div class="container">
                 <div class='row'>
                     <div class='col-md-4'>
+                        <div class='panel panel-danger'>
+                                <div class='panel-heading'>
                     <h3>Customer Info:</h3>
-                    <form>
-                      <div class="form-group">
+                    </div>
+                    <form style="padding: 10px" >
+                      <div class="form-group" >
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" required>
                       </div>
@@ -89,24 +91,28 @@
                       </div>
 
                       <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="text" class="form-control" id="phone">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city">
                           </div>
+                          
+                          <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" class="form-control" id="phone">
+                              </div>
                         
                       <div class="form-group">
-                          <label for="home">Home Type</label>
-                          <select class="form-control" id="home"
-                            [(ngModel)]="model.home" name="home"
-                            #home="ngModel">
-                            <option *ngFor="let hom of home" [value]="hom">{{hom}}</option>
+                            <label for="Home">Home</label>
+                            <select class="form-control" id="home" required>
+                            <option *ngFor="let pow of home" [value]="pow">{{pow}}</option>
                         </select>
                       </div>
 
-                
-                      <button type="submit" class="btn btn-success">Submit</button>
+
+                      <a class="btn btn-danger" href="/confirm">Place Order</a>
                 
                     </form>
                    </div>
+                </div>
                 </div>  
     </div>
 </div>

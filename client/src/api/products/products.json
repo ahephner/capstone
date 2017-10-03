@@ -76,5 +76,32 @@
         "price": 2.95,
         "starRating": 4.6,
         "imageUrl": "./assets/images/egg.png"
+    },{
+        "productId": 500,
+        "productName": "Kenn With 2 Ns Egg Soup ",
+        "productCode": "GMG-0042",
+        "releaseDate": "October 15, 2015",
+        "description": "Awesome, Stuff",
+        "price": 7.95,
+        "starRating": 5,
+        "imageUrl": "./assets/images/egg.png"
+    },{
+        "productId": 505,
+        "productName": "Paul's Stuff",
+        "productCode": "GMG-0042",
+        "releaseDate": "October 15, 2015",
+        "description": "Very Healthy",
+        "price": 6.69,
+        "starRating": 5,
+        "imageUrl": "./assets/images/blacksoup.png"
+    },{
+        "productId": 1000,
+        "productName": "Jay's Famous Chicken",
+        "productCode": "GMG-0042",
+        "releaseDate": "October 15, 2015",
+        "description": "Best in Town",
+        "price": 14.91,
+        "starRating": 5,
+        "imageUrl": "./assets/images/orangechicken.png"
     }
 ]
