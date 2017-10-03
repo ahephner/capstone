@@ -1,3 +1,26 @@
-<p>
-  signin works!
-</p>
+<h3>Sign In:</h3>
+<form (submit)="onSignup()">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-3">
+         <div class="form-group">
+           <label for="email">Email</label>
+           <!-- the [(ngModel)] tag binds the info from this field to the controllers properties -->
+           <input type="text" id="email" name="email" class="form-control" [(ngModel)] = "email">
+         </div>
+         <div class="form-group">
+           <label for="password">Password</label>
+           <input type="password" id="password" name="password" class="form-control" [(ngModel)] = "password">
+         </div>
+         <div class="form-group">
+           <label for="name">Name</label>
+           <input type="name" id="name" name="name" class="form-control" [(ngModel)] = "name">
+         </div>
+         <input type="button" value="Sign In" />
+         <a routerLink="/signup"> <input type="button" value="Sign Up" id="signUp"></a>
+         
+         <!-- <a routerLink="/signup" routerLinkActive="active">Sign Up</a> -->
+       </div>
+      </div>
+    </div>
+  </form>

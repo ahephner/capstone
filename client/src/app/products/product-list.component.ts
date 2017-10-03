@@ -18,7 +18,10 @@ export class ProductListComponent implements OnInit {
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
+    takeOut: boolean = false;
     errorMessage: string;
+    home =  ['Apartment', 'Home', 'Walk-Up'];
+
 
     _listFilter: string;
     get listFilter(): string {
@@ -49,6 +52,10 @@ export class ProductListComponent implements OnInit {
 
     toggleImage(): void {
         this.showImage = !this.showImage;
+    }
+    
+    toggleTable(): void {
+        this.takeOut = !this.takeOut;
     }
 
     ngOnInit(): void {

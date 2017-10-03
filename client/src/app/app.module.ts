@@ -2,6 +2,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+
 // this allows us to do the [(ngModel)] in our forms
 import { FormsModule } from '@angular/forms';
 

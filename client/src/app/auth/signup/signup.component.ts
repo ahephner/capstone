@@ -37,5 +37,7 @@ export class SignupComponent implements OnInit {
       this.router.navigate(['/products']);
     });
     // if you want to show the error message, place it in a catch().
- }
+ };
+
+ 
 }
